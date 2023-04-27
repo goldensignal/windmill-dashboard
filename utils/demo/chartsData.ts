@@ -16,8 +16,8 @@ export const lineLegends: ILegends[] = [
 ]
 
 export const barLegends: ILegends[] = [
-  { title: 'SC', color: 'bg-teal-600' },
   { title: 'NC', color: 'bg-blue-600' },
+  { title: 'SC', color: 'bg-teal-600' },
 ]
 
 export const doughnutOptions = {
@@ -29,7 +29,79 @@ export const doughnutOptions = {
          * These colors come from Tailwind CSS palette
          * https://tailwindcss.com/docs/customizing-colors/#default-color-palette
          */
-        backgroundColor: ['#0694a2', '#1c64f2', '#7e3af2'],
+        backgroundColor: ['#1c64f2', '#0694a2', '#7e3af2'],
+        label: 'Dataset 1',
+      },
+    ],
+    labels: ['NC', 'CS'],
+  },
+  options: {
+    responsive: true,
+    cutoutPercentage: 80,
+  },
+  legend: {
+    display: false,
+  },
+}
+
+export const allSouthOptions = {
+  data: {
+    datasets: [
+      {
+        data: [0, 100, 0],
+        /**
+         * These colors come from Tailwind CSS palette
+         * https://tailwindcss.com/docs/customizing-colors/#default-color-palette
+         */
+        backgroundColor: ['#1c64f2', '#0694a2', '#7e3af2'],
+        label: 'Dataset 1',
+      },
+    ],
+    labels: ['NC', 'CS'],
+  },
+  options: {
+    responsive: true,
+    cutoutPercentage: 80,
+  },
+  legend: {
+    display: false,
+  },
+}
+
+export const allNorthOptions = {
+  data: {
+    datasets: [
+      {
+        data: [100, 0, 0],
+        /**
+         * These colors come from Tailwind CSS palette
+         * https://tailwindcss.com/docs/customizing-colors/#default-color-palette
+         */
+        backgroundColor: ['#1c64f2', '#0694a2', '#7e3af2'],
+        label: 'Dataset 1',
+      },
+    ],
+    labels: ['NC', 'CS'],
+  },
+  options: {
+    responsive: true,
+    cutoutPercentage: 80,
+  },
+  legend: {
+    display: false,
+  },
+}
+
+export const otherDemoOptions = {
+  data: {
+    datasets: [
+      {
+        data: [30, 70, 0],
+        /**
+         * These colors come from Tailwind CSS palette
+         * https://tailwindcss.com/docs/customizing-colors/#default-color-palette
+         */
+        backgroundColor: ['#1c64f2', '#0694a2', '#7e3af2'],
         label: 'Dataset 1',
       },
     ],

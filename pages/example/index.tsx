@@ -28,7 +28,7 @@ import {
   doughnutOptions,
   lineOptions,
   doughnutLegends,
-  lineLegends,
+  lineLegends, allSouthOptions, allNorthOptions, otherDemoOptions,
 } from 'utils/demo/chartsData'
 
 import {
@@ -97,8 +97,8 @@ function Dashboard() {
           {/* @ts-ignore */}
           <RoundIcon
             icon={MoneyIcon}
-            iconColorClass="text-blue-500 dark:text-blue-100"
-            bgColorClass="bg-blue-100 dark:bg-blue-500"
+            iconColorClass="text-yellow-900 dark:text-yellow-100"
+            bgColorClass="bg-yellow-100 dark:bg-yellow-900"
             className="mr-4"
           />
         </InfoCard>
@@ -117,8 +117,8 @@ function Dashboard() {
           {/* @ts-ignore */}
           <RoundIcon
             icon={ChatIcon}
-            iconColorClass="text-teal-500 dark:text-teal-100"
-            bgColorClass="bg-teal-100 dark:bg-teal-500"
+            iconColorClass="text-green-500 dark:text-green-100"
+            bgColorClass="bg-green-100 dark:bg-green-500"
             className="mr-4"
           />
         </InfoCard>
@@ -127,8 +127,8 @@ function Dashboard() {
           {/* @ts-ignore */}
           <RoundIcon
               icon={ChatIcon}
-              iconColorClass="text-teal-500 dark:text-teal-100"
-              bgColorClass="bg-teal-100 dark:bg-teal-500"
+              iconColorClass="text-green-500 dark:text-green-100"
+              bgColorClass="bg-green-100 dark:bg-green-500"
               className="mr-4"
           />
         </InfoCard>
@@ -137,8 +137,8 @@ function Dashboard() {
           {/* @ts-ignore */}
           <RoundIcon
               icon={ChatIcon}
-              iconColorClass="text-teal-500 dark:text-teal-100"
-              bgColorClass="bg-teal-100 dark:bg-teal-500"
+              iconColorClass="text-green-500 dark:text-green-100"
+              bgColorClass="bg-green-100 dark:bg-green-500"
               className="mr-4"
           />
         </InfoCard>
@@ -147,8 +147,8 @@ function Dashboard() {
           {/* @ts-ignore */}
           <RoundIcon
               icon={ChatIcon}
-              iconColorClass="text-teal-500 dark:text-teal-100"
-              bgColorClass="bg-teal-100 dark:bg-teal-500"
+              iconColorClass="text-green-500 dark:text-green-100"
+              bgColorClass="bg-green-100 dark:bg-green-500"
               className="mr-4"
           />
         </InfoCard>
@@ -193,8 +193,8 @@ function Dashboard() {
           {/* @ts-ignore */}
           <RoundIcon
               icon={ChatIcon}
-              iconColorClass="text-teal-500 dark:text-teal-100"
-              bgColorClass="bg-teal-100 dark:bg-teal-500"
+              iconColorClass="text-green-500 dark:text-green-100"
+              bgColorClass="bg-green-100 dark:bg-green-500"
               className="mr-4"
           />
         </InfoCard>
@@ -213,8 +213,8 @@ function Dashboard() {
           {/* @ts-ignore */}
           <RoundIcon
               icon={ChatIcon}
-              iconColorClass="text-teal-500 dark:text-teal-100"
-              bgColorClass="bg-teal-100 dark:bg-teal-500"
+              iconColorClass="text-green-500 dark:text-green-100"
+              bgColorClass="bg-green-100 dark:bg-green-500"
               className="mr-4"
           />
         </InfoCard>
@@ -223,8 +223,8 @@ function Dashboard() {
           {/* @ts-ignore */}
           <RoundIcon
               icon={ChatIcon}
-              iconColorClass="text-teal-500 dark:text-teal-100"
-              bgColorClass="bg-teal-100 dark:bg-teal-500"
+              iconColorClass="text-green-500 dark:text-green-100"
+              bgColorClass="bg-green-100 dark:bg-green-500"
               className="mr-4"
           />
         </InfoCard>
@@ -263,12 +263,12 @@ function Dashboard() {
         </ChartCard>
 
         <ChartCard title="Beacon">
-          <Doughnut {...doughnutOptions} />
+          <Doughnut {...allSouthOptions} />
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
 
         <ChartCard title="Other">
-          <Doughnut {...doughnutOptions} />
+          <Doughnut {...otherDemoOptions} />
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
 
@@ -281,32 +281,32 @@ function Dashboard() {
       <PageTitle>Critical Internal Endpoints</PageTitle>
       <div className="grid gap-6 mb-8 md:grid-cols-8">
         <ChartCard title="QNXT">
-          <Doughnut {...doughnutOptions} />
+          <Doughnut {...allSouthOptions} />
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
 
         <ChartCard title="EditEcs">
-          <Doughnut {...doughnutOptions} />
+          <Doughnut {...allSouthOptions} />
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
 
         <ChartCard title="PEGA UM">
-          <Doughnut {...doughnutOptions} />
+          <Doughnut {...allSouthOptions} />
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
 
         <ChartCard title="PEGA A&G">
-          <Doughnut {...doughnutOptions} />
+          <Doughnut {...allSouthOptions} />
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
 
         <ChartCard title="CCA">
-          <Doughnut {...doughnutOptions} />
+          <Doughnut {...allSouthOptions} />
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
 
         <ChartCard title="HEDIS QDRM">
-          <Doughnut {...doughnutOptions} />
+          <Doughnut {...allNorthOptions} />
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
 

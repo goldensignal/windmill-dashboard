@@ -5,9 +5,9 @@ export interface ILegends{
 
 
 export const doughnutLegends: ILegends[] = [
-  { title: 'Shirts', color: 'bg-blue-500' },
-  { title: 'Shoes', color: 'bg-teal-600' },
-  { title: 'Bags', color: 'bg-purple-600' },
+  { title: 'NC', color: 'bg-blue-500' },
+  { title: 'SC', color: 'bg-teal-600' },
+  // { title: 'Other', color: 'bg-purple-600' },
 ]
 
 export const lineLegends: ILegends[] = [
@@ -16,15 +16,15 @@ export const lineLegends: ILegends[] = [
 ]
 
 export const barLegends: ILegends[] = [
-  { title: 'Shoes', color: 'bg-teal-600' },
-  { title: 'Bags', color: 'bg-purple-600' },
+  { title: 'SC', color: 'bg-teal-600' },
+  { title: 'NC', color: 'bg-blue-600' },
 ]
 
 export const doughnutOptions = {
   data: {
     datasets: [
       {
-        data: [33, 33, 33],
+        data: [50, 50, 0],
         /**
          * These colors come from Tailwind CSS palette
          * https://tailwindcss.com/docs/customizing-colors/#default-color-palette
@@ -33,7 +33,7 @@ export const doughnutOptions = {
         label: 'Dataset 1',
       },
     ],
-    labels: ['Shoes', 'Shirts', 'Bags'],
+    labels: ['NC', 'CS'],
   },
   options: {
     responsive: true,
@@ -105,14 +105,14 @@ export const barOptions = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
       {
-        label: 'Shoes',
+        label: 'SC',
         backgroundColor: '#0694a2',
         // borderColor: window.chartColors.red,
         borderWidth: 1,
         data: [-3, 14, 52, 74, 33, 90, 70],
       },
       {
-        label: 'Bags',
+        label: 'NC',
         backgroundColor: '#7e3af2',
         // borderColor: window.chartColors.blue,
         borderWidth: 1,

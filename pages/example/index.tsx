@@ -75,43 +75,45 @@ function Dashboard() {
 
   return (
     <Layout>
-      <PageTitle>Dashboard</PageTitle>
-
-      <CTA />
+      <PageTitle>Application Failover Console Dashboard</PageTitle>
 
       {/* <!-- Cards --> */}
-      <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-        <InfoCard title="Total clients" value="6389">
+      <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-8">
+
+        <div >Apigee North Central</div>
+
+        <InfoCard title="External RMP" value="50%" >
           {/* @ts-ignore */}
           <RoundIcon
             icon={PeopleIcon}
-            iconColorClass="text-orange-500 dark:text-orange-100"
-            bgColorClass="bg-orange-100 dark:bg-orange-500"
-            className="mr-4"
-          />
-        </InfoCard>
-
-        <InfoCard title="Account balance" value="$ 46,760.89">
-          {/* @ts-ignore */}
-          <RoundIcon
-            icon={MoneyIcon}
             iconColorClass="text-green-500 dark:text-green-100"
             bgColorClass="bg-green-100 dark:bg-green-500"
             className="mr-4"
           />
+
         </InfoCard>
 
-        <InfoCard title="New sales" value="376">
+        <InfoCard title="Internal RMP VPN" value="0%">
           {/* @ts-ignore */}
           <RoundIcon
-            icon={CartIcon}
+            icon={MoneyIcon}
             iconColorClass="text-blue-500 dark:text-blue-100"
             bgColorClass="bg-blue-100 dark:bg-blue-500"
             className="mr-4"
           />
         </InfoCard>
 
-        <InfoCard title="Pending contacts" value="35">
+        <InfoCard title="Internal RMP" value="20%">
+          {/* @ts-ignore */}
+          <RoundIcon
+            icon={CartIcon}
+            iconColorClass="text-green-500 dark:text-green-100"
+            bgColorClass="bg-green-100 dark:bg-green-500"
+            className="mr-4"
+          />
+        </InfoCard>
+
+        <InfoCard title="Postgress DB" value="50%">
           {/* @ts-ignore */}
           <RoundIcon
             icon={ChatIcon}
@@ -120,72 +122,194 @@ function Dashboard() {
             className="mr-4"
           />
         </InfoCard>
+
+        <InfoCard title="Qpid DB" value="100%">
+          {/* @ts-ignore */}
+          <RoundIcon
+              icon={ChatIcon}
+              iconColorClass="text-teal-500 dark:text-teal-100"
+              bgColorClass="bg-teal-100 dark:bg-teal-500"
+              className="mr-4"
+          />
+        </InfoCard>
+
+        <InfoCard title="Zookeeper Cassandra-DB Follower Observer" value="50%">
+          {/* @ts-ignore */}
+          <RoundIcon
+              icon={ChatIcon}
+              iconColorClass="text-teal-500 dark:text-teal-100"
+              bgColorClass="bg-teal-100 dark:bg-teal-500"
+              className="mr-4"
+          />
+        </InfoCard>
+
+        <InfoCard title="Apigee Mgmt" value="50%">
+          {/* @ts-ignore */}
+          <RoundIcon
+              icon={ChatIcon}
+              iconColorClass="text-teal-500 dark:text-teal-100"
+              bgColorClass="bg-teal-100 dark:bg-teal-500"
+              className="mr-4"
+          />
+        </InfoCard>
       </div>
 
-      <TableContainer>
-        <Table>
-          <TableHeader>
-            <tr>
-              <TableCell>Client</TableCell>
-              <TableCell>Amount</TableCell>
-              <TableCell>Status</TableCell>
-              <TableCell>Date</TableCell>
-            </tr>
-          </TableHeader>
-          <TableBody>
-            {data.map((user, i) => (
-              <TableRow key={i}>
-                <TableCell>
-                  <div className="flex items-center text-sm">
-                    <Avatar
-                      className="hidden mr-3 md:block"
-                      src={user.avatar}
-                      alt="User image"
-                    />
-                    <div>
-                      <p className="font-semibold">{user.name}</p>
-                      <p className="text-xs text-gray-600 dark:text-gray-400">
-                        {user.job}
-                      </p>
-                    </div>
-                  </div>
-                </TableCell>
-                <TableCell>
-                  <span className="text-sm">$ {user.amount}</span>
-                </TableCell>
-                <TableCell>
-                  <Badge type={user.status}>{user.status}</Badge>
-                </TableCell>
-                <TableCell>
-                  <span className="text-sm">
-                    {new Date(user.date).toLocaleDateString()}
-                  </span>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-        <TableFooter>
-          <Pagination
-            totalResults={totalResults}
-            resultsPerPage={resultsPerPage}
-            label="Table navigation"
-            onChange={onPageChange}
-          />
-        </TableFooter>
-      </TableContainer>
+      <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-8">
 
-      <PageTitle>Charts</PageTitle>
-      <div className="grid gap-6 mb-8 md:grid-cols-2">
-        <ChartCard title="Revenue">
+        <div >Apigee South Central</div>
+
+        <InfoCard title="External RMP" value="50%">
+          {/* @ts-ignore */}
+          <RoundIcon
+              icon={PeopleIcon}
+              iconColorClass="text-green-500 dark:text-green-100"
+              bgColorClass="bg-green-100 dark:bg-green-500"
+              className="mr-4"
+          />
+
+        </InfoCard>
+
+        <InfoCard title="Internal RMP VPN" value="100%">
+          {/* @ts-ignore */}
+          <RoundIcon
+              icon={MoneyIcon}
+              iconColorClass="text-blue-500 dark:text-blue-100"
+              bgColorClass="bg-blue-100 dark:bg-blue-500"
+              className="mr-4"
+          />
+        </InfoCard>
+
+        <InfoCard title="Internal RMP" value="80%">
+          {/* @ts-ignore */}
+          <RoundIcon
+              icon={CartIcon}
+              iconColorClass="text-green-500 dark:text-green-100"
+              bgColorClass="bg-green-100 dark:bg-green-500"
+              className="mr-4"
+          />
+        </InfoCard>
+
+        <InfoCard title="Postgress DB" value="50%">
+          {/* @ts-ignore */}
+          <RoundIcon
+              icon={ChatIcon}
+              iconColorClass="text-teal-500 dark:text-teal-100"
+              bgColorClass="bg-teal-100 dark:bg-teal-500"
+              className="mr-4"
+          />
+        </InfoCard>
+
+        <InfoCard title="Qpid DB" value="0%" errorText="Offline">
+          {/* @ts-ignore */}
+          <RoundIcon
+              icon={ChatIcon}
+              iconColorClass="text-yellow-900 dark:text-yellow-100"
+              bgColorClass="bg-yellow-100 dark:bg-yellow-900"
+              className="mr-4"
+          />
+        </InfoCard>
+
+        <InfoCard title="Zookeeper Cassandra-DB Follower Observer" value="50%">
+          {/* @ts-ignore */}
+          <RoundIcon
+              icon={ChatIcon}
+              iconColorClass="text-teal-500 dark:text-teal-100"
+              bgColorClass="bg-teal-100 dark:bg-teal-500"
+              className="mr-4"
+          />
+        </InfoCard>
+
+        <InfoCard title="Apigee Mgmt" value="50%">
+          {/* @ts-ignore */}
+          <RoundIcon
+              icon={ChatIcon}
+              iconColorClass="text-teal-500 dark:text-teal-100"
+              bgColorClass="bg-teal-100 dark:bg-teal-500"
+              className="mr-4"
+          />
+        </InfoCard>
+      </div>
+
+      <PageTitle>Critical API Clients</PageTitle>
+      <div className="grid gap-6 mb-8 md:grid-cols-8">
+        <ChartCard title="SPDC">
           <Doughnut {...doughnutOptions} />
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
 
-        <ChartCard title="Traffic">
-          <Line {...lineOptions} />
-          <ChartLegend legends={lineLegends} />
+        <ChartCard title="Genesys">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
         </ChartCard>
+
+        <ChartCard title="Provider Portal">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        <ChartCard title="Member Portal">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        <ChartCard title="Availity">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        <ChartCard title="PWS">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        <ChartCard title="Beacon">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        <ChartCard title="Other">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        {/*<ChartCard title="Traffic">*/}
+        {/*  <Line {...lineOptions} />*/}
+        {/*  <ChartLegend legends={lineLegends} />*/}
+        {/*</ChartCard>*/}
+      </div>
+
+      <PageTitle>Critical Internal Endpoints</PageTitle>
+      <div className="grid gap-6 mb-8 md:grid-cols-8">
+        <ChartCard title="QNXT">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        <ChartCard title="EditEcs">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        <ChartCard title="PEGA UM">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        <ChartCard title="PEGA A&G">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        <ChartCard title="CCA">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        <ChartCard title="HEDIS QDRM">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
       </div>
     </Layout>
   )

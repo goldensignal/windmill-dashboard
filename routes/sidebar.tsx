@@ -30,63 +30,63 @@ const routes: IRoute[] = [
     name: 'Dashboard', // name that appear in Sidebar
     exact: true,
   },
-  {
-    path: '/example/forms',
-    icon: 'FormsIcon',
-    name: 'Forms',
-  },
-  {
-    path: '/example/cards',
-    icon: 'CardsIcon',
-    name: 'Cards',
-  },
-  {
-    path: '/example/charts',
-    icon: 'ChartsIcon',
-    name: 'Charts',
-  },
-  {
-    path: '/example/buttons',
-    icon: 'ButtonsIcon',
-    name: 'Buttons',
-  },
-  {
-    path: '/example/modals',
-    icon: 'ModalsIcon',
-    name: 'Modals',
-  },
-  {
-    path: '/example/tables',
-    icon: 'TablesIcon',
-    name: 'Tables',
-  },
-  {
-    icon: 'PagesIcon',
-    name: 'Pages',
-    routes: [
-      // submenu
-      {
-        path: '/example/login',
-        name: 'Login',
-      },
-      {
-        path: '/example/create-account',
-        name: 'Create account',
-      },
-      {
-        path: '/example/forgot-password',
-        name: 'Forgot password',
-      },
-      {
-        path: '/example/404',
-        name: '404',
-      },
-      {
-        path: '/example/blank',
-        name: 'Blank',
-      },
-    ],
-  },
+  // {
+  //   path: '/example/forms',
+  //   icon: 'FormsIcon',
+  //   name: 'Forms',
+  // },
+  // {
+  //   path: '/example/cards',
+  //   icon: 'CardsIcon',
+  //   name: 'Cards',
+  // },
+  // {
+  //   path: '/example/charts',
+  //   icon: 'ChartsIcon',
+  //   name: 'Charts',
+  // },
+  // {
+  //   path: '/example/buttons',
+  //   icon: 'ButtonsIcon',
+  //   name: 'Buttons',
+  // },
+  // {
+  //   path: '/example/modals',
+  //   icon: 'ModalsIcon',
+  //   name: 'Modals',
+  // },
+  // {
+  //   path: '/example/tables',
+  //   icon: 'TablesIcon',
+  //   name: 'Tables',
+  // },
+  // {
+  //   icon: 'PagesIcon',
+  //   name: 'Pages',
+  //   routes: [
+  //     // submenu
+  //     {
+  //       path: '/example/login',
+  //       name: 'Login',
+  //     },
+  //     {
+  //       path: '/example/create-account',
+  //       name: 'Create account',
+  //     },
+  //     {
+  //       path: '/example/forgot-password',
+  //       name: 'Forgot password',
+  //     },
+  //     {
+  //       path: '/example/404',
+  //       name: '404',
+  //     },
+  //     {
+  //       path: '/example/blank',
+  //       name: 'Blank',
+  //     },
+  //   ],
+  // }
 ]
 
 export type {IRoute}
